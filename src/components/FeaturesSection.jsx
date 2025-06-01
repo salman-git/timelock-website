@@ -8,7 +8,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 const features = [
 	{
 		icon: <LockIcon color="primary" sx={{ fontSize: 48 }} />,
-		title: 'Lockscreen Overlay',
+		title: 'Frictionless Tracking',
 		text: 'Track time without unlocking',
 		screenshot: '/screenshots/lockscreen.jpg',
 	},

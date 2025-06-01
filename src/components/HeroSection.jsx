@@ -27,16 +27,34 @@ const phoneMockups = [
   },
 ];
 
+const rollingWords = [
+  "better habits",
+  "more focus",
+  "improved productivity",
+  "healthier routines",
+  "mindful living",
+  "personal growth",
+  "time management",
+]
+
 const ROTATE_INTERVAL = 3500; // ms
 
 const HeroSection = () => {
   const theme = useTheme();
   const [focusIndex, setFocusIndex] = useState(0);
+  const [rollingIndex, setRollingIndex] = useState(0);
 
   useEffect(() => {
     const interval = setInterval(() => {
       setFocusIndex((prev) => (prev + 1) % phoneMockups.length);
     }, ROTATE_INTERVAL);
+    return () => clearInterval(interval);
+  }, []);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setRollingIndex((prev) => (prev + 1) % rollingWords.length);
+    }, 2000);
     return () => clearInterval(interval);
   }, []);
 
@@ -57,12 +75,41 @@ const HeroSection = () => {
       }}
       id="hero"
     >
-      <Stack spacing={3} maxWidth={420} zIndex={2}>
+      <Stack spacing={1} maxWidth={420} zIndex={2}>
         <Typography variant="h2" fontWeight={700} color="primary" component={motion.div} initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }}>
           TimeLock
         </Typography>
-        <Typography variant="h4" fontWeight={500} color="text.primary" component={motion.div} initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2, duration: 0.7 }}>
-          Effortless Time Tracking
+        <Typography variant="h4" fontWeight={500} color="text.primary" component={motion.div} initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2, duration: 0.7 }}
+          sx={{ lineHeight: 1.5, display: 'flex', alignItems: 'center', flexWrap: 'wrap' }}
+        >
+          Effortless Tracking For
+          <Box sx={{ display: 'inline-block', verticalAlign: 'middle', minWidth: 180, position: 'relative', height: '2em', overflow: 'hidden' }}>
+            <motion.span
+              key={rollingIndex}
+              initial={{ y: '-100%', opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              exit={{ y: '100%', opacity: 0 }}
+              transition={{ duration: 0.4, ease: 'easeInOut' }}
+              style={{
+                display: 'inline-block',
+                padding: '0.1em 0.5em',
+                borderRadius: 8,
+                background: theme.palette.secondary.main,
+                color: '#fff',
+                fontWeight: 700,
+                fontSize: '1.1em',
+                boxShadow: `0 2px 8px 0 ${theme.palette.secondary.main}22`,
+                position: 'relative',
+                left: 0,
+                top: 0,
+                width: '100%',
+                textAlign: 'center',
+                whiteSpace: 'nowrap',
+              }}
+            >
+              {rollingWords[rollingIndex]}
+            </motion.span>
+          </Box>
         </Typography>
         <Typography variant="subtitle1" color="text.secondary" component={motion.div} initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.4, duration: 0.7 }}>
           Track your day right from the lockscreen
