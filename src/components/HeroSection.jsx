@@ -72,7 +72,7 @@ const HeroSection = () => {
           color="primary"
           size="large"
           startIcon={<AndroidIcon />}
-          href="#download"
+          href="https://play.google.com/store/apps/details?id=com.meancoder.timelock"
           sx={{
             boxShadow: `0 2px 16px 0 ${theme.palette.primary.main}44`,
             fontSize: 18,
