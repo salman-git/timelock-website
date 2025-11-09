@@ -13,18 +13,18 @@ const steps = [
 	},
 	{
 		icon: <LooksTwoIcon color="secondary" sx={{ fontSize: 40 }} />,
-		title: 'Select Activity',
-		text: 'Choose what you want to track',
+		title: 'Select Tool',
+		text: 'Access productivity tools directly from your lockscreen',
 	},
 	{
 		icon: <Looks3Icon color="primary" sx={{ fontSize: 40 }} />,
 		title: 'Track Effortlessly',
-		text: 'Start timer from your lockscreen',
+		text: 'Manage your TODO or start time tracker without unlocking your phone',
 	},
 	{
 		icon: <Looks4Rounded color='secondary' sx={{ color: 'secondary', fontSize: 40 }} />,
 		title: 'Get AI Insights',
-		text: 'See your productivity patterns',
+		text: 'Talk to AI assistant, plan your day, and improve productivity',
 	},
 ];
 

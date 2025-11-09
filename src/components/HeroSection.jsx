@@ -8,28 +8,50 @@ const phoneMockups = [
     rotate: '-10deg',
     top: 40,
     left: 0,
-    src: '/screenshots/mainscreen.jpg',
+    src: '/screenshots/main-screen.jpeg',
     label: 'Main',
   },
   {
     rotate: '10deg',
     top: 80,
     left: 60,
-    src: '/screenshots/lockscreen.jpg',
+    src: '/screenshots/todo.jpeg',
     label: 'Lockscreen',
   },
   {
     rotate: '0deg',
     top: 0,
     left: 30,
-    src: '/screenshots/insightsscreen.jpg',
+    src: '/screenshots/pomodoro.jpeg',
+    label: 'Insights',
+  },
+  {
+    rotate: '0deg',
+    top: 0,
+    left: 30,
+    src: '/screenshots/tracking.jpeg',
+    label: 'Insights',
+  },
+  {
+    rotate: '0deg',
+    top: 0,
+    left: 30,
+    src: '/screenshots/chat1.jpeg',
+    label: 'Insights',
+  },
+  {
+    rotate: '0deg',
+    top: 0,
+    left: 30,
+    src: '/screenshots/day-planner.jpeg',
     label: 'Insights',
   },
 ];
 
 const rollingWords = [
+  "AI productivity",
   "better habits",
-  "more focus",
+  "better focus",
   "improved productivity",
   "healthier routines",
   "mindful living",
@@ -77,12 +99,12 @@ const HeroSection = () => {
     >
       <Stack spacing={1} maxWidth={420} zIndex={2}>
         <Typography variant="h2" fontWeight={700} color="primary" component={motion.div} initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }}>
-          TimeLock
+          TimeLock 2.0
         </Typography>
         <Typography variant="h4" fontWeight={500} color="text.primary" component={motion.div} initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2, duration: 0.7 }}
           sx={{ lineHeight: 1.5, display: 'flex', alignItems: 'center', flexWrap: 'wrap' }}
         >
-          Effortless Tracking For
+          Powered by Agentic AI 
           <Box sx={{ display: 'inline-block', verticalAlign: 'middle', minWidth: 180, position: 'relative', height: '2em', overflow: 'hidden' }}>
             <motion.span
               key={rollingIndex}

@@ -4,6 +4,8 @@ import { Box, Typography, Grid, Card, CardContent, Table, TableBody, TableCell, 
 const features = [
   { label: 'Local Tracking', free: true, premium: true },
   { label: 'Cloud Sync', free: false, premium: true },
+  { label: 'AI Day Planner', free: false, premium: true },
+  { label: 'AI Chat', free: false, premium: true },
   { label: 'AI Insights', free: false, premium: true },
 ];
 

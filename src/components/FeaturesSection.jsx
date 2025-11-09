@@ -9,20 +9,20 @@ const features = [
 	{
 		icon: <LockIcon color="primary" sx={{ fontSize: 48 }} />,
 		title: 'Frictionless Tracking',
-		text: 'Track time without unlocking',
-		screenshot: '/screenshots/lockscreen.jpg',
+		text: 'Access productivity tools without unlocking phone',
+		screenshot: '/screenshots/todo.jpeg',
 	},
 	{
 		icon: <LabelImportantIcon color="secondary" sx={{ fontSize: 48 }} />,
-		title: 'Smart Activity Tagging',
-		text: 'Categorize your time easily',
-		screenshot: '/screenshots/mainscreen.jpg',
+		title: 'AI Day Planner',
+		text: 'Let AI organize your day based on your habits and priorities',
+		screenshot: '/screenshots/day-planner.jpeg',
 	},
 	{
 		icon: <AutoAwesomeIcon sx={{ color: '#00e6e6', fontSize: 48 }} />,
-		title: 'AI Insights',
-		text: 'Get patterns and suggestions weekly',
-		screenshot: '/screenshots/insightsscreen.jpg',
+		title: 'Talk to Your Data',
+		text: 'Chat with an AI assistant and get personalized productivity insights',
+		screenshot: '/screenshots/chat1.jpeg',
 	},
 ];
 
